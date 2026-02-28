@@ -1,0 +1,18 @@
+=== ASTRA-9 MISSION DEBRIEF -- CLASSIFIED ===
+
+Date:    Cycle 9-4781
+Author:  Lt. Orin Voss, Maintenance Lead
+
+Summary:
+  Routine sweep of cargo bay C-7 turned up anomalous EM readings.
+  Sensor logs forwarded to NavOps.  Maintenance crew instructed to
+  purge diagnostic cache after departure.  No further action.
+
+NOTICE:
+  Diagnostic verification token was encrypted per SOP-7 and split
+  across telemetry fragments alpha/bravo/charlie in this cache.
+  XOR key stored in companion file diag_key.bin.
+  Fragment format: TLM header (7 bytes) + padding + encrypted data.
+  Reassemble in sequence order (field at offset 4) after decryption.
+
+--- END OF REPORT ---

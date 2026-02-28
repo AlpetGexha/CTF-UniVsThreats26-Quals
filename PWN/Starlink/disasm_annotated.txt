@@ -1,0 +1,649 @@
+004011b0: endbr64 
+004011b4: xor     ebp, ebp
+004011b6: mov     r9, rdx
+004011b9: pop     rsi
+004011ba: mov     rdx, rsp
+004011bd: and     rsp, 0xfffffffffffffff0
+004011c1: push    rax
+004011c2: push    rsp
+004011c3: xor     r8d, r8d
+004011c6: xor     ecx, ecx
+004011c8: mov     rdi, 0x401add
+004011cf: call    qword ptr [rip + 0x2e03]
+004011d5: hlt     
+004011d6: nop     word ptr [rax + rax]
+004011e0: endbr64 
+004011e4: ret         ; RET
+004011e5: nop     word ptr [rax + rax]
+004011ef: nop     
+004011f0: mov     eax, 0x404070
+004011f5: cmp     rax, 0x404070
+004011fb: je      0x401210    ; -> 0x401210
+004011fd: mov     eax, 0
+00401202: test    rax, rax
+00401205: je      0x401210    ; -> 0x401210
+00401207: mov     edi, 0x404070
+0040120c: jmp     rax
+0040120e: nop     
+00401210: ret         ; RET
+00401211: nop     word ptr [rax + rax]
+0040121c: nop     dword ptr [rax]
+00401220: mov     esi, 0x404070
+00401225: sub     rsi, 0x404070
+0040122c: mov     rax, rsi
+0040122f: shr     rsi, 0x3f
+00401233: sar     rax, 3
+00401237: add     rsi, rax
+0040123a: sar     rsi, 1
+0040123d: je      0x401250    ; -> 0x401250
+0040123f: mov     eax, 0
+00401244: test    rax, rax
+00401247: je      0x401250    ; -> 0x401250
+00401249: mov     edi, 0x404070
+0040124e: jmp     rax
+00401250: ret         ; RET
+00401251: nop     word ptr [rax + rax]
+0040125c: nop     dword ptr [rax]
+00401260: endbr64 
+00401264: cmp     byte ptr [rip + 0x2e1d], 0
+0040126b: jne     0x401280    ; -> 0x401280
+0040126d: push    rbp
+0040126e: mov     rbp, rsp
+00401271: call    0x4011f0    ; call 0x4011f0
+00401276: mov     byte ptr [rip + 0x2e0b], 1
+0040127d: pop     rbp
+0040127e: ret         ; RET
+0040127f: nop     
+00401280: ret         ; RET
+00401281: nop     word ptr [rax + rax]
+0040128c: nop     dword ptr [rax]
+00401290: endbr64 
+00401294: jmp     0x401220    ; -> 0x401220
+00401296: endbr64 
+0040129a: push    rbp
+0040129b: mov     rbp, rsp
+0040129e: sub     rsp, 0x10
+004012a2: nop     
+004012a3: call    0x401160    ; call 0x401160
+004012a8: mov     byte ptr [rbp - 1], al
+004012ab: cmp     byte ptr [rbp - 1], 0xa
+004012af: je      0x4012b7    ; -> 0x4012b7
+004012b1: cmp     byte ptr [rbp - 1], 0xff
+004012b5: jne     0x4012a3    ; -> 0x4012a3
+004012b7: nop     
+004012b8: leave   
+004012b9: ret         ; RET
+004012ba: endbr64 
+004012be: push    rbp
+004012bf: mov     rbp, rsp
+004012c2: sub     rsp, 0x20
+004012c6: mov     qword ptr [rbp - 0x18], rdi
+004012ca: mov     dword ptr [rbp - 0x1c], esi
+004012cd: mov     rax, qword ptr [rip + 0x2dac]
+004012d4: mov     rdi, rax
+004012d7: call    0x401180    ; call 0x401180
+004012dc: mov     eax, dword ptr [rbp - 0x1c]
+004012df: sub     eax, 1
+004012e2: movsxd  rdx, eax
+004012e5: mov     rax, qword ptr [rbp - 0x18]
+004012e9: mov     rsi, rax
+004012ec: mov     edi, 0
+004012f1: call    0x401140    ; call 0x401140
+004012f6: mov     dword ptr [rbp - 4], eax
+004012f9: cmp     dword ptr [rbp - 4], 0
+004012fd: jle     0x40133f    ; -> 0x40133f
+004012ff: mov     eax, dword ptr [rbp - 4]
+00401302: movsxd  rdx, eax
+00401305: mov     rax, qword ptr [rbp - 0x18]
+00401309: add     rax, rdx
+0040130c: mov     byte ptr [rax], 0
+0040130f: mov     eax, dword ptr [rbp - 4]
+00401312: cdqe    
+00401314: lea     rdx, [rax - 1]
+00401318: mov     rax, qword ptr [rbp - 0x18]
+0040131c: add     rax, rdx
+0040131f: movzx   eax, byte ptr [rax]
+00401322: cmp     al, 0xa
+00401324: jne     0x401346    ; -> 0x401346
+00401326: mov     eax, dword ptr [rbp - 4]
+00401329: cdqe    
+0040132b: lea     rdx, [rax - 1]
+0040132f: mov     rax, qword ptr [rbp - 0x18]
+00401333: add     rax, rdx
+00401336: mov     byte ptr [rax], 0
+00401339: sub     dword ptr [rbp - 4], 1
+0040133d: jmp     0x401346    ; -> 0x401346
+0040133f: mov     rax, qword ptr [rbp - 0x18]
+00401343: mov     byte ptr [rax], 0
+00401346: mov     eax, dword ptr [rbp - 4]
+00401349: leave   
+0040134a: ret         ; RET
+0040134b: endbr64 
+0040134f: push    rbp
+00401350: mov     rbp, rsp
+00401353: sub     rsp, 0x20
+00401357: mov     rax, qword ptr fs:[0x28]
+00401360: mov     qword ptr [rbp - 8], rax
+00401364: xor     eax, eax
+00401366: mov     edi, 0x18
+0040136b: call    0x401170    ; call 0x401170
+00401370: mov     qword ptr [rbp - 0x10], rax
+00401374: lea     rax, [rip + 0xc8d]    ; rodata[0x402008]="Add description"
+0040137b: mov     rdi, rax
+0040137e: call    0x401110    ; call 0x401110
+00401383: lea     rax, [rip + 0xc8e]    ; rodata[0x402018]="1.add new description 2.edit description 
+>"
+0040138a: mov     rdi, rax
+0040138d: mov     eax, 0
+00401392: call    0x401130    ; call 0x401130
+00401397: mov     eax, 0
+0040139c: call    0x401296    ; call 0x401296
+004013a1: lea     rax, [rbp - 0x18]
+004013a5: mov     rsi, rax
+004013a8: lea     rax, [rip + 0xc95]    ; rodata[0x402044]="%d"
+004013af: mov     rdi, rax
+004013b2: mov     eax, 0
+004013b7: call    0x401190    ; call 0x401190
+004013bc: mov     eax, 0
+004013c1: call    0x401296    ; call 0x401296
+004013c6: mov     eax, dword ptr [rbp - 0x18]
+004013c9: cmp     eax, 3
+004013cc: je      0x401524    ; -> 0x401524
+004013d2: cmp     eax, 3
+004013d5: jg      0x401510    ; -> 0x401510
+004013db: cmp     eax, 1
+004013de: je      0x4013ea    ; -> 0x4013ea
+004013e0: cmp     eax, 2
+004013e3: je      0x401457    ; -> 0x401457
+004013e5: jmp     0x401510    ; -> 0x401510
+004013ea: mov     rax, qword ptr [rbp - 0x10]
+004013ee: mov     edx, 0x18
+004013f3: mov     rsi, rax
+004013f6: mov     edi, 0
+004013fb: call    0x401140    ; call 0x401140
+00401400: mov     dword ptr [rbp - 0x14], eax
+00401403: cmp     dword ptr [rbp - 0x14], 0
+00401407: jle     0x401438    ; -> 0x401438
+00401409: mov     eax, dword ptr [rbp - 0x14]
+0040140c: cdqe    
+0040140e: lea     rdx, [rax - 1]
+00401412: mov     rax, qword ptr [rbp - 0x10]
+00401416: add     rax, rdx
+00401419: movzx   eax, byte ptr [rax]
+0040141c: cmp     al, 0xa
+0040141e: jne     0x401438    ; -> 0x401438
+00401420: mov     eax, dword ptr [rbp - 0x14]
+00401423: cdqe    
+00401425: lea     rdx, [rax - 1]
+00401429: mov     rax, qword ptr [rbp - 0x10]
+0040142d: add     rax, rdx
+00401430: mov     byte ptr [rax], 0
+00401433: jmp     0x40151f    ; -> 0x40151f
+00401438: mov     eax, dword ptr [rbp - 0x14]
+0040143b: movsxd  rdx, eax
+0040143e: mov     rax, qword ptr [rbp - 0x10]
+00401442: add     rax, rdx
+00401445: mov     byte ptr [rax], 0
+00401448: mov     eax, 0
+0040144d: call    0x401296    ; call 0x401296
+00401452: jmp     0x40151f    ; -> 0x40151f
+00401457: lea     rax, [rip + 0xbea]    ; rodata[0x402048]="how many characters you need to correct?
+>"
+0040145e: mov     rdi, rax
+00401461: mov     eax, 0
+00401466: call    0x401130    ; call 0x401130
+0040146b: mov     rax, qword ptr [rip + 0x2c0e]
+00401472: mov     rdi, rax
+00401475: call    0x401180    ; call 0x401180
+0040147a: lea     rax, [rbp - 0x1c]
+0040147e: mov     rsi, rax
+00401481: lea     rax, [rip + 0xbbc]    ; rodata[0x402044]="%d"
+00401488: mov     rdi, rax
+0040148b: mov     eax, 0
+00401490: call    0x401190    ; call 0x401190
+00401495: mov     eax, 0
+0040149a: call    0x401296    ; call 0x401296
+0040149f: lea     rax, [rip + 0xbd2]    ; rodata[0x402078]="i can guess what you add ,i m going to tell after you add"
+004014a6: mov     rdi, rax
+004014a9: call    0x401110    ; call 0x401110
+004014ae: mov     rax, qword ptr [rip + 0x2bcb]
+004014b5: mov     rdi, rax
+004014b8: call    0x401180    ; call 0x401180
+004014bd: lea     rax, [rip + 0xbee]    ; rodata[0x4020b2]="[>] Enter correction: 
+>"
+004014c4: mov     rdi, rax
+004014c7: mov     eax, 0
+004014cc: call    0x401130    ; call 0x401130
+004014d1: mov     rax, qword ptr [rip + 0x2ba8]
+004014d8: mov     rdi, rax
+004014db: call    0x401180    ; call 0x401180
+004014e0: mov     eax, dword ptr [rbp - 0x1c]
+004014e3: movsxd  rdx, eax
+004014e6: mov     rax, qword ptr [rbp - 0x10]
+004014ea: add     rax, rdx
+004014ed: mov     edx, 0x18
+004014f2: mov     rsi, rax
+004014f5: mov     edi, 0
+004014fa: call    0x401140    ; call 0x401140
+004014ff: lea     rax, [rip + 0x2bca]
+00401506: mov     rdi, rax
+00401509: call    0x401110    ; call 0x401110
+0040150e: jmp     0x40151f    ; -> 0x40151f
+00401510: lea     rax, [rip + 0xbb4]    ; rodata[0x4020cb]="Invalid"
+00401517: mov     rdi, rax
+0040151a: call    0x401110    ; call 0x401110
+0040151f: jmp     0x401383    ; -> 0x401383
+00401524: nop     
+00401525: mov     rax, qword ptr [rbp - 8]
+00401529: sub     rax, qword ptr fs:[0x28]
+00401532: je      0x401539    ; -> 0x401539
+00401534: call    0x401120    ; call 0x401120
+00401539: leave   
+0040153a: ret         ; RET
+0040153b: endbr64 
+0040153f: push    rbp
+00401540: mov     rbp, rsp
+00401543: sub     rsp, 0x10
+00401547: mov     edi, 0x128
+0040154c: call    0x401170    ; call 0x401170
+00401551: mov     qword ptr [rbp - 8], rax
+00401555: cmp     qword ptr [rbp - 8], 0
+0040155a: je      0x401618    ; -> 0x401618
+00401560: lea     rax, [rip + 0xb6c]    ; rodata[0x4020d3]="Add a name (max 24):"
+00401567: mov     rdi, rax
+0040156a: call    0x401110    ; call 0x401110
+0040156f: mov     rax, qword ptr [rbp - 8]
+00401573: mov     esi, 0x19
+00401578: mov     rdi, rax
+0040157b: call    0x4012ba    ; call 0x4012ba
+00401580: lea     rax, [rip + 0xb61]    ; rodata[0x4020e8]="Add content (max 256):"
+00401587: mov     rdi, rax
+0040158a: call    0x401110    ; call 0x401110
+0040158f: mov     rax, qword ptr [rbp - 8]
+00401593: add     rax, 0x19
+00401597: mov     esi, 0x101
+0040159c: mov     rdi, rax
+0040159f: call    0x4012ba    ; call 0x4012ba
+004015a4: mov     rax, qword ptr [rbp - 8]
+004015a8: mov     qword ptr [rax + 0x120], 0
+004015b3: mov     rax, qword ptr [rip + 0x2b2e]
+004015ba: test    rax, rax
+004015bd: jne     0x4015cc    ; -> 0x4015cc
+004015bf: mov     rax, qword ptr [rbp - 8]
+004015c3: mov     qword ptr [rip + 0x2b1e], rax
+004015ca: jmp     0x401607    ; -> 0x401607
+004015cc: mov     rax, qword ptr [rip + 0x2b15]
+004015d3: mov     qword ptr [rbp - 0x10], rax
+004015d7: jmp     0x4015e8    ; -> 0x4015e8
+004015d9: mov     rax, qword ptr [rbp - 0x10]
+004015dd: mov     rax, qword ptr [rax + 0x120]
+004015e4: mov     qword ptr [rbp - 0x10], rax
+004015e8: mov     rax, qword ptr [rbp - 0x10]
+004015ec: mov     rax, qword ptr [rax + 0x120]
+004015f3: test    rax, rax
+004015f6: jne     0x4015d9    ; -> 0x4015d9
+004015f8: mov     rax, qword ptr [rbp - 0x10]
+004015fc: mov     rdx, qword ptr [rbp - 8]
+00401600: mov     qword ptr [rax + 0x120], rdx
+00401607: mov     eax, dword ptr [rip + 0x2acb]
+0040160d: add     eax, 1
+00401610: mov     dword ptr [rip + 0x2ac2], eax
+00401616: jmp     0x401619    ; -> 0x401619
+00401618: nop     
+00401619: leave   
+0040161a: ret         ; RET
+0040161b: endbr64 
+0040161f: push    rbp
+00401620: mov     rbp, rsp
+00401623: sub     rsp, 0x440
+0040162a: mov     rax, qword ptr fs:[0x28]
+00401633: mov     qword ptr [rbp - 8], rax
+00401637: xor     eax, eax
+00401639: mov     rax, qword ptr [rip + 0x2aa8]
+00401640: test    rax, rax
+00401643: jne     0x401659    ; -> 0x401659
+00401645: lea     rax, [rip + 0xab3]    ; rodata[0x4020ff]="List is empty."
+0040164c: mov     rdi, rax
+0040164f: call    0x401110    ; call 0x401110
+00401654: jmp     0x401795    ; -> 0x401795
+00401659: lea     rax, [rip + 0xab0]    ; rodata[0x402110]="Enter the name you want to update:"
+00401660: mov     rdi, rax
+00401663: call    0x401110    ; call 0x401110
+00401668: lea     rax, [rbp - 0x430]
+0040166f: mov     esi, 0x19
+00401674: mov     rdi, rax
+00401677: call    0x4012ba    ; call 0x4012ba
+0040167c: mov     rax, qword ptr [rip + 0x2a65]
+00401683: mov     qword ptr [rbp - 0x438], rax
+0040168a: mov     byte ptr [rbp - 0x43d], 0
+00401691: jmp     0x4016ce    ; -> 0x4016ce
+00401693: mov     rdx, qword ptr [rbp - 0x438]
+0040169a: lea     rax, [rbp - 0x430]
+004016a1: mov     rsi, rdx
+004016a4: mov     rdi, rax
+004016a7: call    0x401150    ; call 0x401150
+004016ac: test    eax, eax
+004016ae: jne     0x4016b9    ; -> 0x4016b9
+004016b0: mov     byte ptr [rbp - 0x43d], 1
+004016b7: jmp     0x4016d8    ; -> 0x4016d8
+004016b9: mov     rax, qword ptr [rbp - 0x438]
+004016c0: mov     rax, qword ptr [rax + 0x120]
+004016c7: mov     qword ptr [rbp - 0x438], rax
+004016ce: cmp     qword ptr [rbp - 0x438], 0
+004016d6: jne     0x401693    ; -> 0x401693
+004016d8: cmp     byte ptr [rbp - 0x43d], 0
+004016df: je      0x401786    ; -> 0x401786
+004016e5: lea     rax, [rip + 0xa47]    ; rodata[0x402133]="Give the new content :"
+004016ec: mov     rdi, rax
+004016ef: call    0x401110    ; call 0x401110
+004016f4: lea     rax, [rbp - 0x410]
+004016fb: mov     edx, 0x400
+00401700: mov     rsi, rax
+00401703: mov     edi, 0
+00401708: call    0x401140    ; call 0x401140
+0040170d: mov     dword ptr [rbp - 0x43c], eax
+00401713: cmp     dword ptr [rbp - 0x43c], 0
+0040171a: jle     0x401758    ; -> 0x401758
+0040171c: mov     eax, dword ptr [rbp - 0x43c]
+00401722: sub     eax, 1
+00401725: cdqe    
+00401727: movzx   eax, byte ptr [rbp + rax - 0x410]
+0040172f: cmp     al, 0xa
+00401731: jne     0x401748    ; -> 0x401748
+00401733: mov     eax, dword ptr [rbp - 0x43c]
+00401739: sub     eax, 1
+0040173c: cdqe    
+0040173e: mov     byte ptr [rbp + rax - 0x410], 0
+00401746: jmp     0x401758    ; -> 0x401758
+00401748: mov     eax, dword ptr [rbp - 0x43c]
+0040174e: cdqe    
+00401750: mov     byte ptr [rbp + rax - 0x410], 0
+00401758: mov     rax, qword ptr [rbp - 0x438]
+0040175f: lea     rdx, [rax + 0x19]
+00401763: lea     rax, [rbp - 0x410]
+0040176a: mov     rsi, rax
+0040176d: mov     rdi, rdx
+00401770: call    0x401100    ; call 0x401100
+00401775: lea     rax, [rip + 0x9ce]    ; rodata[0x40214a]="Node updated."
+0040177c: mov     rdi, rax
+0040177f: call    0x401110    ; call 0x401110
+00401784: jmp     0x401795    ; -> 0x401795
+00401786: lea     rax, [rip + 0x9cb]    ; rodata[0x402158]="Name not found."
+0040178d: mov     rdi, rax
+00401790: call    0x401110    ; call 0x401110
+00401795: mov     rax, qword ptr [rbp - 8]
+00401799: sub     rax, qword ptr fs:[0x28]
+004017a2: je      0x4017a9    ; -> 0x4017a9
+004017a4: call    0x401120    ; call 0x401120
+004017a9: leave   
+004017aa: ret         ; RET
+004017ab: endbr64 
+004017af: push    rbp
+004017b0: mov     rbp, rsp
+004017b3: sub     rsp, 0x10
+004017b7: mov     rax, qword ptr [rip + 0x292a]
+004017be: test    rax, rax
+004017c1: je      0x401865    ; -> 0x401865
+004017c7: mov     rax, qword ptr [rip + 0x291a]
+004017ce: mov     rax, qword ptr [rax + 0x120]
+004017d5: test    rax, rax
+004017d8: jne     0x4017f6    ; -> 0x4017f6
+004017da: mov     rax, qword ptr [rip + 0x2907]
+004017e1: mov     rdi, rax
+004017e4: call    0x4010f0    ; call 0x4010f0
+004017e9: mov     qword ptr [rip + 0x28f4], 0
+004017f4: jmp     0x401845    ; -> 0x401845
+004017f6: mov     dword ptr [rbp - 0xc], 0
+004017fd: mov     rax, qword ptr [rip + 0x28e4]
+00401804: mov     qword ptr [rbp - 8], rax
+00401808: jmp     0x40181d    ; -> 0x40181d
+0040180a: mov     rax, qword ptr [rbp - 8]
+0040180e: mov     rax, qword ptr [rax + 0x120]
+00401815: mov     qword ptr [rbp - 8], rax
+00401819: add     dword ptr [rbp - 0xc], 1
+0040181d: cmp     dword ptr [rbp - 0xc], 1
+00401821: jne     0x40180a    ; -> 0x40180a
+00401823: mov     rax, qword ptr [rbp - 8]
+00401827: mov     rax, qword ptr [rax + 0x120]
+0040182e: mov     rdi, rax
+00401831: call    0x4010f0    ; call 0x4010f0
+00401836: mov     rax, qword ptr [rbp - 8]
+0040183a: mov     qword ptr [rax + 0x120], 0
+00401845: mov     eax, dword ptr [rip + 0x288d]
+0040184b: sub     eax, 1
+0040184e: mov     dword ptr [rip + 0x2884], eax
+00401854: lea     rax, [rip + 0x90d]    ; rodata[0x402168]=">> Automatic Cleanup: Last node deleted."
+0040185b: mov     rdi, rax
+0040185e: call    0x401110    ; call 0x401110
+00401863: jmp     0x401866    ; -> 0x401866
+00401865: nop     
+00401866: leave   
+00401867: ret         ; RET
+00401868: endbr64 
+0040186c: push    rbp
+0040186d: mov     rbp, rsp
+00401870: sub     rsp, 0x40
+00401874: mov     rax, qword ptr fs:[0x28]
+0040187d: mov     qword ptr [rbp - 8], rax
+00401881: xor     eax, eax
+00401883: mov     rax, qword ptr [rip + 0x285e]
+0040188a: test    rax, rax
+0040188d: je      0x401983    ; -> 0x401983
+00401893: lea     rax, [rip + 0x8f7]    ; rodata[0x402191]="Name to delete:"
+0040189a: mov     rdi, rax
+0040189d: call    0x401110    ; call 0x401110
+004018a2: lea     rax, [rbp - 0x30]
+004018a6: mov     esi, 0x19
+004018ab: mov     rdi, rax
+004018ae: call    0x4012ba    ; call 0x4012ba
+004018b3: mov     rax, qword ptr [rip + 0x282e]
+004018ba: mov     qword ptr [rbp - 0x40], rax
+004018be: mov     qword ptr [rbp - 0x38], 0
+004018c6: mov     rax, qword ptr [rip + 0x281b]
+004018cd: mov     rdx, rax
+004018d0: lea     rax, [rbp - 0x30]
+004018d4: mov     rsi, rax
+004018d7: mov     rdi, rdx
+004018da: call    0x401150    ; call 0x401150
+004018df: test    eax, eax
+004018e1: jne     0x40191a    ; -> 0x40191a
+004018e3: mov     rax, qword ptr [rbp - 0x40]
+004018e7: mov     rdi, rax
+004018ea: call    0x4010f0    ; call 0x4010f0
+004018ef: mov     eax, dword ptr [rip + 0x27e3]
+004018f5: sub     eax, 1
+004018f8: mov     dword ptr [rip + 0x27da], eax
+004018fe: jmp     0x401984    ; -> 0x401984
+00401903: mov     rax, qword ptr [rbp - 0x40]
+00401907: mov     qword ptr [rbp - 0x38], rax
+0040190b: mov     rax, qword ptr [rbp - 0x40]
+0040190f: mov     rax, qword ptr [rax + 0x120]
+00401916: mov     qword ptr [rbp - 0x40], rax
+0040191a: cmp     qword ptr [rbp - 0x40], 0
+0040191f: je      0x401938    ; -> 0x401938
+00401921: mov     rax, qword ptr [rbp - 0x40]
+00401925: lea     rdx, [rbp - 0x30]
+00401929: mov     rsi, rdx
+0040192c: mov     rdi, rax
+0040192f: call    0x401150    ; call 0x401150
+00401934: test    eax, eax
+00401936: jne     0x401903    ; -> 0x401903
+00401938: cmp     qword ptr [rbp - 0x40], 0
+0040193d: jne     0x401950    ; -> 0x401950
+0040193f: lea     rax, [rip + 0x85b]    ; rodata[0x4021a1]="Not found."
+00401946: mov     rdi, rax
+00401949: call    0x401110    ; call 0x401110
+0040194e: jmp     0x401984    ; -> 0x401984
+00401950: mov     rax, qword ptr [rbp - 0x40]
+00401954: mov     rdx, qword ptr [rax + 0x120]
+0040195b: mov     rax, qword ptr [rbp - 0x38]
+0040195f: mov     qword ptr [rax + 0x120], rdx
+00401966: mov     rax, qword ptr [rbp - 0x40]
+0040196a: mov     rdi, rax
+0040196d: call    0x4010f0    ; call 0x4010f0
+00401972: mov     eax, dword ptr [rip + 0x2760]
+00401978: sub     eax, 1
+0040197b: mov     dword ptr [rip + 0x2757], eax
+00401981: jmp     0x401984    ; -> 0x401984
+00401983: nop     
+00401984: mov     rax, qword ptr [rbp - 8]
+00401988: sub     rax, qword ptr fs:[0x28]
+00401991: je      0x401998    ; -> 0x401998
+00401993: call    0x401120    ; call 0x401120
+00401998: leave   
+00401999: ret         ; RET
+0040199a: endbr64 
+0040199e: push    rbp
+0040199f: mov     rbp, rsp
+004019a2: sub     rsp, 0x20
+004019a6: mov     rax, qword ptr fs:[0x28]
+004019af: mov     qword ptr [rbp - 8], rax
+004019b3: xor     eax, eax
+004019b5: mov     eax, dword ptr [rip + 0x271d]
+004019bb: cmp     eax, 2
+004019be: jle     0x401a1d    ; -> 0x401a1d
+004019c0: lea     rax, [rip + 0x7e9]    ; rodata[0x4021b0]="
+! WARNING: Memory limit reached !"
+004019c7: mov     rdi, rax
+004019ca: call    0x401110    ; call 0x401110
+004019cf: lea     rax, [rip + 0x802]    ; rodata[0x4021d8]="Chance to update before deletion. Update? (y/n): "
+004019d6: mov     rdi, rax
+004019d9: mov     eax, 0
+004019de: call    0x401130    ; call 0x401130
+004019e3: lea     rax, [rbp - 0x12]
+004019e7: mov     esi, 5
+004019ec: mov     rdi, rax
+004019ef: call    0x4012ba    ; call 0x4012ba
+004019f4: movzx   eax, byte ptr [rbp - 0x12]
+004019f8: cmp     al, 0x79
+004019fa: je      0x401a04    ; -> 0x401a04
+004019fc: movzx   eax, byte ptr [rbp - 0x12]
+00401a00: cmp     al, 0x59
+00401a02: jne     0x401a0e    ; -> 0x401a0e
+00401a04: mov     eax, 0
+00401a09: call    0x40161b    ; call 0x40161b
+00401a0e: mov     eax, 0
+00401a13: call    0x4017ab    ; call 0x4017ab
+00401a18: jmp     0x401ad1    ; -> 0x401ad1
+00401a1d: lea     rax, [rip + 0x7ec]    ; rodata[0x402210]="
+1.Create 2.Update 3.Delete 4.Description 5.Exit
+> "
+00401a24: mov     rdi, rax
+00401a27: mov     eax, 0
+00401a2c: call    0x401130    ; call 0x401130
+00401a31: lea     rax, [rbp - 0x12]
+00401a35: mov     esi, 0xa
+00401a3a: mov     rdi, rax
+00401a3d: call    0x4012ba    ; call 0x4012ba
+00401a42: lea     rax, [rbp - 0x12]
+00401a46: mov     rdi, rax
+00401a49: call    0x4011a0    ; call 0x4011a0
+00401a4e: mov     dword ptr [rbp - 0x18], eax
+00401a51: cmp     dword ptr [rbp - 0x18], 5
+00401a55: ja      0x401aab    ; -> 0x401aab
+00401a57: mov     eax, dword ptr [rbp - 0x18]
+00401a5a: lea     rdx, [rax*4]
+00401a62: lea     rax, [rip + 0x7e7]    ; rodata[0x402250]="[øÿÿ+øÿÿ7øÿÿCøÿÿOøÿÿoøÿÿGive a description of what you store 
+>"
+00401a69: mov     eax, dword ptr [rdx + rax]
+00401a6c: cdqe    
+00401a6e: lea     rdx, [rip + 0x7db]    ; rodata[0x402250]="[øÿÿ+øÿÿ7øÿÿCøÿÿOøÿÿoøÿÿGive a description of what you store 
+>"
+00401a75: add     rax, rdx
+00401a78: notrack jmp rax
+00401a7b: mov     eax, 0
+00401a80: call    0x40153b    ; call 0x40153b
+00401a85: jmp     0x401ad1    ; -> 0x401ad1
+00401a87: mov     eax, 0
+00401a8c: call    0x40161b    ; call 0x40161b
+00401a91: jmp     0x401ad1    ; -> 0x401ad1
+00401a93: mov     eax, 0
+00401a98: call    0x401868    ; call 0x401868
+00401a9d: jmp     0x401ad1    ; -> 0x401ad1
+00401a9f: mov     eax, 0
+00401aa4: call    0x40134b    ; call 0x40134b
+00401aa9: jmp     0x401ad1    ; -> 0x401ad1
+00401aab: lea     rax, [rip + 0x792]    ; rodata[0x402244]="Invalid."
+00401ab2: mov     rdi, rax
+00401ab5: call    0x401110    ; call 0x401110
+00401aba: jmp     0x4019b5    ; -> 0x4019b5
+00401abf: nop     
+00401ac0: mov     rax, qword ptr [rbp - 8]
+00401ac4: sub     rax, qword ptr fs:[0x28]
+00401acd: je      0x401adb    ; -> 0x401adb
+00401acf: jmp     0x401ad6    ; -> 0x401ad6
+00401ad1: jmp     0x4019b5    ; -> 0x4019b5
+00401ad6: call    0x401120    ; call 0x401120
+00401adb: leave   
+00401adc: ret         ; RET
+00401add: endbr64 
+00401ae1: push    rbp
+00401ae2: mov     rbp, rsp
+00401ae5: sub     rsp, 0x10
+00401ae9: lea     rax, [rip + 0x778]    ; rodata[0x402268]="Give a description of what you store 
+>"
+00401af0: mov     rdi, rax
+00401af3: mov     eax, 0
+00401af8: call    0x401130    ; call 0x401130
+00401afd: mov     edx, 0x1f
+00401b02: lea     rax, [rip + 0x25a7]
+00401b09: mov     rsi, rax
+00401b0c: mov     edi, 0
+00401b11: call    0x401140    ; call 0x401140
+00401b16: mov     dword ptr [rbp - 4], eax
+00401b19: mov     eax, dword ptr [rbp - 4]
+00401b1c: cdqe    
+00401b1e: lea     rdx, [rip + 0x258b]
+00401b25: mov     byte ptr [rax + rdx], 0
+00401b29: lea     rax, [rip + 0x760]    ; rodata[0x402290]="What is you re favorite number ?
+>"
+00401b30: mov     rdi, rax
+00401b33: mov     eax, 0
+00401b38: call    0x401130    ; call 0x401130
+00401b3d: lea     rax, [rip + 0x2564]
+00401b44: mov     rsi, rax
+00401b47: lea     rax, [rip + 0x765]    ; rodata[0x4022b3]="%ld"
+00401b4e: mov     rdi, rax
+00401b51: mov     eax, 0
+00401b56: call    0x401190    ; call 0x401190
+00401b5b: lea     rax, [rip + 0x755]    ; rodata[0x4022b7]="Add a secret word"
+00401b62: mov     rdi, rax
+00401b65: call    0x401110    ; call 0x401110
+00401b6a: mov     edx, 7
+00401b6f: lea     rax, [rip + 0x255a]
+00401b76: mov     rsi, rax
+00401b79: mov     edi, 0
+00401b7e: call    0x401140    ; call 0x401140
+00401b83: mov     dword ptr [rbp - 4], eax
+00401b86: mov     eax, dword ptr [rbp - 4]
+00401b89: cdqe    
+00401b8b: lea     rdx, [rip + 0x253e]
+00401b92: mov     byte ptr [rax + rdx], 0
+00401b96: lea     rax, [rip + 0x72c]    ; rodata[0x4022c9]="What is you re name ?"
+00401b9d: mov     rdi, rax
+00401ba0: call    0x401110    ; call 0x401110
+00401ba5: mov     edx, 7
+00401baa: lea     rax, [rip + 0x24ef]
+00401bb1: mov     rsi, rax
+00401bb4: mov     edi, 0
+00401bb9: call    0x401140    ; call 0x401140
+00401bbe: mov     dword ptr [rbp - 4], eax
+00401bc1: mov     eax, dword ptr [rbp - 4]
+00401bc4: cdqe    
+00401bc6: lea     rdx, [rip + 0x24d3]
+00401bcd: mov     byte ptr [rax + rdx], 0
+00401bd1: lea     rax, [rip + 0x707]    ; rodata[0x4022df]="welcome "
+00401bd8: mov     rdi, rax
+00401bdb: mov     eax, 0
+00401be0: call    0x401130    ; call 0x401130
+00401be5: lea     rax, [rip + 0x24b4]
+00401bec: mov     rdi, rax
+00401bef: mov     eax, 0
+00401bf4: call    0x401130    ; call 0x401130
+00401bf9: mov     rax, qword ptr [rip + 0x24e8]
+00401c00: mov     rdi, rax
+00401c03: mov     eax, 0
+00401c08: call    0x40199a    ; call 0x40199a
+00401c0d: mov     eax, 0
+00401c12: leave   
+00401c13: ret         ; RET
