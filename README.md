@@ -28,15 +28,15 @@
 
 ## PWN
 
-- [Miller's Planet (TBD)](./PWN/Miller%27s%20Planet/README.md)
-- [Starlink (TBD)](./PWN/Starlink/README.md)
+- [Miller's Planet (56)](./PWN/Miller%27s%20Planet/README.md)
+- [Starlink (56)](./PWN/Starlink/README.md)
 
 ## Rev
 
 - [Bro is not a space hacker (52)](./Rev/Bro%20is%20not%20a%20space%20hacker/README.md)
 - [Satellua (132)](./Rev/Satellua/README.md)
-- [Sea of Fire (TBD)](./Rev/Sea%20of%20Fire/README.md)
-- [Starfield Relay (TBD)](./Rev/Starfield%20Relay/README.md)
+- [Sea of Fire (289)](./Rev/Sea%20of%20Fire/README.md)
+- [Starfield Relay (50)](./Rev/Starfield%20Relay/README.md)
 
 ## Stegano
 

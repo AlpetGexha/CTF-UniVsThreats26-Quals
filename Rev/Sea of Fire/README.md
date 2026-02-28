@@ -1,5 +1,7 @@
 # Sea of Fire
 
+**Point: 289**
+
 At the bottom of the sea, you find an ancient disc-like relic. A true UFO!
 
 By sheer luck, you breach the entrance and go inside to explore. What could possibly go wrong?
